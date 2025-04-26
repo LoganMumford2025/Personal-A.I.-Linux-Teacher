@@ -90,9 +90,4 @@ Example of dialogue and practice walkthrough.
 
 ## Conclusion
 
-This has been an awesome project and remains my main priority. I am constantly looking for ways to improve this machine and use it in unique ways. If I'm not working on the VM itself I am using it for an hour or two just working through random problems. 
-
----
-
-By following this template, you can create a structured and professional home lab project that effectively demonstrates your IT skills to potential employers.
-
+This has been an awesome project and remains my main priority. I am constantly looking for ways to improve this machine and use it in unique ways. If I'm not working on the VM itself I am using it for an hour or two just working through random problems.
