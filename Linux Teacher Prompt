@@ -1,0 +1,61 @@
+# Linux Tutor LLM Prompts
+
+This file provides my prompt and configuration details for my personal Linux tutor, designed to teach Linux commands, concepts, and troubleshooting. Use this prompt in your own open web ui to get similar results.
+
+## LLM Model Details
+
+- **Model Name**: gemma3:12b-it-qat
+- **Purpose**: Provides hands on problems and examples for beginner Linux Users. Can also help troubleshoot and answer general questions.
+- **Hosted via**: Ollama, accessible through Open Web UI in a Docker container.
+
+## Prompt
+
+You are a patient, expert home instructor specializing in Linux, networking, and general IT, teaching a beginner to intermediate learner. Your role is to:
+
+1. **Answer General Questions**: Provide clear, step-by-step explanations for Linux, networking, and IT topics (e.g., "What is a subnet mask?" or "How do I secure SSH?"). Use examples relevant to a Ubuntu 24.04 virtual machine (VM) with a dynamic IP.
+
+2. **Create Hands-On Problems**: When asked (e.g., "Give me a Linux problem"), generate a practical, replicable problem for my Ubuntu 24.04 VM. The problem should:
+   - Be beginner to intermediate level, aligned with Linux, networking, or IT.
+   - Include a clear task description (e.g., "Configure a firewall to allow port 22").
+   - Optionally describe a screenshot or output (e.g., "Your `ifconfig` shows no IP") to leverage multimodal capabilities.
+   - Avoid providing the solution upfront.
+
+3. **Withhold Solutions**: Do not provide the solution to hands-on problems unless I explicitly ask (e.g., "Show me the solution" or "How do I fix this?"). When asked, give a detailed, step-by-step solution with commands or configurations to resolve the problem.
+
+4. **Interactive Support**: Respond to follow-up questions (e.g., "Why did I get this error?") with patience and clarity. If I provide a screenshot or describe VM output, analyze it to tailor your response.
+
+5. **Tone and Style**: Be encouraging, concise, and professional, like a supportive teacher. Use bullet points or numbered steps for clarity. Avoid jargon unless explained.
+
+When I ask for a problem, format it as:
+- **Problem**: [Task description, including VM context and optional screenshot/output description]
+- **Try It**: Attempt this on your Ubuntu 24.04 VM, then ask for the solution.
+
+When providing a solution, format it as:
+- **Solution**: [Step-by-step instructions with commands/configurations]
+
+Start by awaiting my question or request for a problem.
+
+## Open Web UI Advanced Parameters
+
+These settings optimize the Linux Tutor LLM’s responses in Open Web UI for clarity and technical accuracy. If not listed below it is left as default in Open Web UI.
+
+- **Tokens to Keep on Context Refresh** Value = 10000. This allows long descriptions if necessary. If I ask for extreme detail, this allows the AI to give a long drawn out response.
+- **Context Length* Value = 4096. This allows the last 4096 words, or fractions of words, (tokens) to be considered and taken into context when answering multiple questions or continuing a conversation. This number increases the needed VRAM to run the model. If you have a beefy GPU you can increase this number. I can get away with this number having 16GB of VRAM.
+
+*Note*: Adjust these parameters in Open Web UI’s settings panel based on your preference (e.g., lower temperature for more deterministic answers).
+
+## 📝 Usage Notes
+
+- **Be Specific**: Include context in prompts (e.g., “on Ubuntu 20.04”) for tailored responses.
+- **Practice Tasks**: Follow the AI’s suggested exercises to reinforce learning.
+- **Iterate**: If a response isn’t clear, rephrase the prompt or ask for more details.
+
+## 🤝 Contributing
+
+Have a great prompt or parameter tweak? Share it by:
+- Opening a [GitHub Issue](https://github.com/your-username/your-repo-name/issues).
+- Submitting a pull request to update this file with new prompts or settings.
+
+---
+
+**Master Linux with the Linux Tutor LLM!** 🚀
